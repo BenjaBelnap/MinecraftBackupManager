@@ -1,0 +1,24 @@
+# Minecraft Backup Manager Configuration
+
+# Docker container name running the Minecraft server
+container_name: "minecraft_server"
+
+# Path to the world directory inside the container
+world_path: "/data/world"
+
+# Local backup directory
+backup_dir: "./backups"
+
+# Warning times in minutes before shutdown
+warnings:
+  - 15
+  - 10
+  - 5
+  - 1
+
+# Retention policy
+retention:
+  # Maximum number of backups to keep (set to 0 to disable)
+  max_backups: 7
+  # Maximum age of backups in days (set to 0 to disable)
+  max_days: 14
