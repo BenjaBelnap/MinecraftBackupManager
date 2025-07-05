@@ -3,8 +3,11 @@
 # Docker container name running the Minecraft server
 container_name: "minecraft_server"
 
-# Path to the world directory inside the container
-world_path: "/data/world"
+# Paths to the world directories inside the container
+world_paths:
+  - "/data/world"
+  - "/data/world_nether"
+  - "/data/world_the_end"
 
 # Local backup directory
 backup_dir: "./backups"
@@ -22,3 +25,8 @@ retention:
   max_backups: 7
   # Maximum age of backups in days (set to 0 to disable)
   max_days: 14
+
+# Development mode
+# Set to true to only test send_server_command and exit
+# Set to false for normal operation
+dev: false
