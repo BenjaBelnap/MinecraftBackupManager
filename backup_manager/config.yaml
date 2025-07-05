@@ -14,10 +14,9 @@ backup_dir: "./backups"
 
 # Warning times in minutes before shutdown
 warnings:
-  - 15
-  - 10
-  - 5
   - 1
+  - 5
+  - 10
 
 # Retention policy
 retention:
@@ -29,4 +28,4 @@ retention:
 # Development mode
 # Set to true to only test send_server_command and exit
 # Set to false for normal operation
-dev: true
+dev: false
